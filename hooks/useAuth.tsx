@@ -8,7 +8,6 @@ import {
 
 import { useRouter } from "next/router";
 import {
-  Children,
   createContext,
   useContext,
   useEffect,
@@ -116,7 +115,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       loading,
       error,
     }),
-    [user, loading]
+    [user, loading, error]
   );
 
   return (
